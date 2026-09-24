@@ -1,0 +1,212 @@
+# PHASE 1 – BRAINSTORMING & IDEATION
+
+## Project Title
+
+**Script-Controlled ACL – Restrict Record Access Based on Field Value**
+
+## 1. Introduction
+
+Access control is an important part of any application because sensitive information should only be available to authorized users.
+
+ServiceNow provides Access Control Lists (ACLs) to control access to records and operations.
+
+This project focuses on implementing a script-controlled ACL in ServiceNow to restrict users from viewing records unless they satisfy specific access conditions.
+
+In this project, the Branch field is used as an important condition. EEE branch records are protected so that authorized users can access them, while administrators retain full access.
+
+## 2. Problem Identification
+
+In an organization, different users may have different responsibilities and access requirements.
+
+If every user is allowed to access all records, sensitive information may be exposed to unauthorized users.
+
+Users may also be given unnecessary permissions to create, modify, or delete records.
+
+Therefore, a proper access control mechanism is required to ensure that users can perform only the operations permitted to them.
+
+## 3. Problem Statement
+
+The main problem is to protect institution or student records from unauthorized access.
+
+The system should restrict access based on the user's role and the value of a particular record field.
+
+For example, records belonging to a particular branch should be accessible only to authorized users.
+
+The system should also provide administrators with complete access to the records.
+
+## 4. Brainstorming
+
+During the brainstorming stage, several ideas were considered for improving record security in ServiceNow.
+
+### Idea 1 – Role-Based Access
+
+Users can be assigned different roles, and each role can provide a particular permission.
+
+### Idea 2 – Field-Based Access
+
+Access can be controlled based on the value of a field such as Branch.
+
+### Idea 3 – Script-Controlled Access
+
+A server-side script can evaluate the current user's role and decide whether access should be allowed or denied.
+
+### Idea 4 – Operation-Based Access
+
+Different permissions can be provided for different operations such as:
+
+* Read
+* Create
+* Write
+* Delete
+
+### Selected Idea
+
+The selected idea is to combine role-based access, field-based conditions, and script-controlled ACLs to provide record-level security.
+
+## 5. Proposed Solution
+
+The proposed solution is to create a custom ServiceNow table named **Institution Details**.
+
+The table will contain information such as:
+
+* Student Roll Number
+* Student Name
+* Faculty Name
+* Branch
+* Email
+* Phone Number
+* Description
+
+The Branch field will contain values such as:
+
+* ECE
+* EEE
+* CSE
+
+Access Control Lists will then be created to control access to the records.
+
+A script-controlled READ ACL will be used to evaluate the user's role and control access.
+
+Additional ACLs will be used for CREATE, WRITE, and DELETE operations.
+
+## 6. Project Idea
+
+The main idea of the project is:
+
+**User → Role → ACL → Condition/Script → Access Decision**
+
+The system checks whether the user has the required permission.
+
+If the user satisfies the required conditions, access is allowed.
+
+If the user does not satisfy the conditions, access is denied.
+
+Administrators are provided with full access.
+
+## 7. Objectives
+
+The main objectives of this project are:
+
+1. To understand ServiceNow Access Control Lists.
+2. To understand role-based access control.
+3. To implement record-level security.
+4. To create custom users and roles.
+5. To create a custom ServiceNow table.
+6. To configure different types of ACLs.
+7. To restrict unauthorized users from viewing protected records.
+8. To control record creation.
+9. To control record modification.
+10. To control record deletion.
+11. To use server-side scripting for access decisions.
+12. To verify the security configuration using different users.
+
+## 8. Scope of the Project
+
+The project focuses on security implementation within the ServiceNow platform.
+
+The scope includes:
+
+* User creation
+* Role creation
+* Role assignment
+* Custom table creation
+* Field creation
+* Record creation
+* READ access control
+* CREATE access control
+* WRITE access control
+* DELETE access control
+* Script-controlled authorization
+* Security verification
+
+The project can be used as a learning model for understanding record-level security in ServiceNow.
+
+## 9. Expected Outcome
+
+The expected outcome of the project is a secure ServiceNow table where access is controlled according to user roles and configured conditions.
+
+The system should demonstrate that:
+
+* Authorized users can access permitted records.
+* Unauthorized users cannot access restricted records.
+* Users with appropriate permissions can perform their allowed operations.
+* Administrators can access the records without the same restrictions.
+
+## 10. Benefits
+
+The project provides several benefits:
+
+1. Improves record security.
+2. Reduces unauthorized access.
+3. Provides role-based permissions.
+4. Supports record-level security.
+5. Controls different operations independently.
+6. Helps protect sensitive information.
+7. Provides centralized access control.
+8. Demonstrates practical ServiceNow security concepts.
+9. Makes permissions easier to manage.
+10. Helps understand ACL scripting.
+
+## 11. Technology Used
+
+The project uses:
+
+* ServiceNow Platform
+* ServiceNow Access Control Lists
+* JavaScript
+* ServiceNow Roles
+* Custom Tables
+* User Administration
+* System Security
+
+## 12. Initial Project Workflow
+
+The planned workflow is:
+
+User Creation
+↓
+Role Creation
+↓
+Role Assignment
+↓
+Custom Table Creation
+↓
+Field Creation
+↓
+Record Creation
+↓
+ACL Configuration
+↓
+Script Configuration
+↓
+Security Testing
+↓
+Final Verification
+
+## 13. Conclusion
+
+The brainstorming and ideation phase establishes the basic idea of implementing record-level security in ServiceNow.
+
+The project combines custom roles, ACLs, field-based conditions, and server-side scripting to control access to records.
+
+The selected approach will be developed and tested in the next phases of the project.
