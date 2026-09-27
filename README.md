@@ -21,7 +21,7 @@ First, we created a test user named EEE User in ServiceNow.
 The user details were:
 
 User ID: EEE User
-First Name: EEE
+First Name: EEE  
 Last Name: User
 Email: eeeuser@gmail.com
 
